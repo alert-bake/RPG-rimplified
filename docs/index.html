@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPG Rimplified v0.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/spriteloader.css">
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>RPG Rimplified <span class="muted">v0.1</span></h1>
+      <div class="stats">
+        <span>Time: <b id="time">0</b></span>
+        <span>HP: <b id="hp">100</b></span>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tabbtn active" data-tab="main">Main</button>
+      <button class="tabbtn" data-tab="inventory">Inventory</button>
+      <button class="tabbtn" data-tab="battle">Battle</button>
+      <button class="tabbtn" data-tab="settings">Settings</button>
+    </nav>
+
+    <main>
+      <!-- MAIN -->
+      <section id="main" class="tab active">
+        <button id="tickBtn">Tick</button>
+        <div id="log"></div>
+      </section>
+
+      <!-- INVENTORY -->
+      <section id="inventory" class="tab">
+        <div id="inventoryList">[inventory items go here]</div>
+        <div id="player">
+          <div class="head"></div>
+          <div class="chest" id="chestSlot"></div>
+          <div class="legs"></div>
+        </div>
+      </section>
+
+      <!-- BATTLE -->
+      <section id="battle" class="tab">
+        <p>A wild enemy appears!</p>
+        <button id="fightBtn">Fight</button>
+        <button id="itemBtn">Use Item</button>
+        <button id="fleeBtn">Flee</button>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="settings" class="tab">
+        <button id="saveBtn">Save</button>
+        <button id="loadBtn">Load</button>
+        <button id="resetBtn">Hard Reset</button>
+        <div id="errorMsg" style="color:red; margin-top:10px;"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="muted">Made for mobile • Saves locally</span>
+    </footer>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="js/stat.js"></script>
+  <script src="js/saving.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/debug.js"></script>
+</body>
+    </html>
